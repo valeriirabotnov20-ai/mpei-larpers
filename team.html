@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Состав · MPEI LARPERS</title>
+<meta name="description" content="Состав CTF-команды mpei_larpers: участники и открытые слоты по направлениям web, pwn, reverse, crypto, forensics.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Состав · MPEI LARPERS">
+<meta property="og:description" content="Участники команды и открытые слоты по направлениям.">
+<meta property="og:image" content="https://mpei-larpers.ru/assets/og.jpg">
+<meta property="og:url" content="https://mpei-larpers.ru/team.html">
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="canonical" href="https://mpei-larpers.ru/team.html">
+</head>
+<body>
+<div class="layout">
+
+  <header class="header">
+    <div class="header__container">
+      <button class="header__bars" type="button" data-menu-toggle aria-label="Открыть меню" data-i18n-attr="aria-label:aria.menuBtn" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header__nav">
+        <nav class="nav" aria-label="Меню команды" data-i18n-attr="aria-label:aria.menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">О команде</a></li>
+            <li class="nav__item"><a class="nav__link nav__link_active" href="team.html" aria-current="page" data-i18n="nav.team">Состав</a></li>            <li class="nav__item"><a class="nav__link" href="partners.html" data-i18n="nav.partners">Партнёры</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class="header__logo" href="index.html" aria-label="MPEI LARPERS, на главную" data-i18n-attr="aria-label:aria.logo">
+        <img src="assets/logo-dark.png" alt="" width="640" height="640">
+      </a>
+    </div>
+    <div class="header__buttons">
+      <div class="lang" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="Язык сайта">
+        <button class="lang__btn" type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang__btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="header__btn" href="https://t.me/mpei_larpers" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+      <a class="header__btn" href="https://ctftime.org/team/447741" target="_blank" rel="noopener">CTFtime <i>↗</i></a>
+    </div>
+  </header>
+
+  <main class="layout__content">
+
+    <section class="page page--wide page--team">
+      <div class="wrapper">
+        <h1 class="heading" data-i18n="h1.team">Состав</h1>
+
+        <!--
+          Карточки игроков. Клик по нику раскрывает карточку (формат teamspirit.gg).
+          ЧТО ЗАМЕНИТЬ:
+          1) photo  — файл фото, имя файла = ник игрока: assets/players/<ник>.jpg
+          2) nick   — ник
+          3) name   — имя и фамилия
+          4) Роль / Биография / Социальные сети — тексты внутри team-player__body
+          Блок .team-player__photo отвечает за большое фото справа на широком экране.
+          Порядок карточек = порядок в списке.
+        -->
+        <div class="team-page__list" data-roster>
+
+          <div class="team-page__list-item">
+            <div class="team-player" id="player-lavbarr">
+              <div class="team-player__photo" style="background-image:url('assets/players/lavbarr.jpg')" aria-hidden="true"></div>
+              <div class="team-player__back">
+                <span class="back-link" data-player-close role="button" tabindex="0" data-i18n="team.back">Состав</span>
+              </div>
+              <div class="team-player__head" data-player-head role="button" tabindex="0" aria-expanded="false" aria-controls="player-body-lavbarr">
+                <div class="team-player__nick">lavbarr</div>
+                <div class="team-player__name" data-i18n="team.name.lavbarr">Валерий Работнов</div>
+              </div>
+              <div class="team-player__body" id="player-body-lavbarr">
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.city">Родной город</div>
+                  <div class="team-player__info-value" data-i18n="team.city.lavbarr">Балашиха, Россия</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.born">Дата рождения</div>
+                  <div class="team-player__info-value" data-i18n="team.born.lavbarr">8 декабря 2007</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.focus">Категория</div>
+                  <div class="team-player__info-value" data-i18n="team.focus.lavbarr">crypto</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.socials">Социальные сети</div>
+                  <div class="team-player__info-value">
+                    <div class="team-player__socials">
+                      <a class="socials__item" href="https://t.me/lavbarr" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-page__list-item">
+            <div class="team-player" id="player-n7cI">
+              <div class="team-player__photo" style="background-image:url('assets/players/n7cI.jpg')" aria-hidden="true"></div>
+              <div class="team-player__back">
+                <span class="back-link" data-player-close role="button" tabindex="0" data-i18n="team.back">Состав</span>
+              </div>
+              <div class="team-player__head" data-player-head role="button" tabindex="0" aria-expanded="false" aria-controls="player-body-n7cI">
+                <div class="team-player__nick">n7cI</div>
+                <div class="team-player__name" data-i18n="team.name.n7cI">Зураб Билалов</div>
+              </div>
+              <div class="team-player__body" id="player-body-n7cI">
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.city">Родной город</div>
+                  <div class="team-player__info-value" data-i18n="team.city.n7cI">Дербент, Россия</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.born">Дата рождения</div>
+                  <div class="team-player__info-value" data-i18n="team.born.n7cI">18 апреля 2007</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.focus">Категория</div>
+                  <div class="team-player__info-value" data-i18n="team.focus.n7cI">osint, stego</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.socials">Социальные сети</div>
+                  <div class="team-player__info-value">
+                    <div class="team-player__socials"><span class="socials__none">—</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-page__list-item">
+            <div class="team-player" id="player-0xshalamov">
+              <div class="team-player__photo" style="background-image:url('assets/players/0xshalamov.jpg')" aria-hidden="true"></div>
+              <div class="team-player__back">
+                <span class="back-link" data-player-close role="button" tabindex="0" data-i18n="team.back">Состав</span>
+              </div>
+              <div class="team-player__head" data-player-head role="button" tabindex="0" aria-expanded="false" aria-controls="player-body-0xshalamov">
+                <div class="team-player__nick">0xShalamov</div>
+                <div class="team-player__name" data-i18n="team.name.0xshalamov">Данила Шаламов</div>
+              </div>
+              <div class="team-player__body" id="player-body-0xshalamov">
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.city">Родной город</div>
+                  <div class="team-player__info-value" data-i18n="team.city.0xshalamov">Москва, Россия</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.born">Дата рождения</div>
+                  <div class="team-player__info-value" data-i18n="team.born.0xshalamov">21 августа 2007</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.focus">Категория</div>
+                  <div class="team-player__info-value" data-i18n="team.focus.0xshalamov">pwn, reverse</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.socials">Социальные сети</div>
+                  <div class="team-player__info-value">
+                    <div class="team-player__socials">
+                      <a class="socials__item" href="https://t.me/kunstl3r" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+                      <a class="socials__item" href="https://x.com/0xShalamov" target="_blank" rel="noopener">X <i>↗</i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-page__list-item">
+            <div class="team-player" id="player-frosty_qq">
+              <div class="team-player__photo" style="background-image:url('assets/players/frosty_qq.jpg')" aria-hidden="true"></div>
+              <div class="team-player__back">
+                <span class="back-link" data-player-close role="button" tabindex="0" data-i18n="team.back">Состав</span>
+              </div>
+              <div class="team-player__head" data-player-head role="button" tabindex="0" aria-expanded="false" aria-controls="player-body-frosty_qq">
+                <div class="team-player__nick">frosty_qq</div>
+                <div class="team-player__name" data-i18n="team.name.frosty_qq">Никита Бойцов</div>
+              </div>
+              <div class="team-player__body" id="player-body-frosty_qq">
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.city">Родной город</div>
+                  <div class="team-player__info-value" data-i18n="team.city.frosty_qq">Москва, Россия</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.born">Дата рождения</div>
+                  <div class="team-player__info-value" data-i18n="team.born.frosty_qq">14 мая 2007</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.focus">Категория</div>
+                  <div class="team-player__info-value" data-i18n="team.focus.frosty_qq">forensic</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.socials">Социальные сети</div>
+                  <div class="team-player__info-value">
+                    <div class="team-player__socials">
+                      <a class="socials__item" href="https://t.me/frosty_qq" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-page__list-item">
+            <div class="team-player" id="player-gest">
+              <div class="team-player__photo" style="background-image:url('assets/players/gest.jpg')" aria-hidden="true"></div>
+              <div class="team-player__back">
+                <span class="back-link" data-player-close role="button" tabindex="0" data-i18n="team.back">Состав</span>
+              </div>
+              <div class="team-player__head" data-player-head role="button" tabindex="0" aria-expanded="false" aria-controls="player-body-gest">
+                <div class="team-player__nick">gest</div>
+                <div class="team-player__name" data-i18n="team.name.gest">Георгий Буюкиди</div>
+              </div>
+              <div class="team-player__body" id="player-body-gest">
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.city">Родной город</div>
+                  <div class="team-player__info-value" data-i18n="team.city.gest">Тараз, Казахстан</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.born">Дата рождения</div>
+                  <div class="team-player__info-value" data-i18n="team.born.gest">6 ноября 2007</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.focus">Категория</div>
+                  <div class="team-player__info-value" data-i18n="team.focus.gest">web, pentest</div>
+                </div>
+                <div class="team-player__info-item">
+                  <div class="team-player__info-label" data-i18n="team.socials">Социальные сети</div>
+                  <div class="team-player__info-value">
+                    <div class="team-player__socials">
+                      <a class="socials__item" href="https://x.com/georgegestov" target="_blank" rel="noopener">X <i>↗</i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

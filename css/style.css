@@ -1,0 +1,319 @@
+/* ============================================================
+   mpei_larpers · CTF-команда НИУ МЭИ
+   Палитра снята с teamspirit.gg: только чёрный, белый и
+   приглушённый белый. Красного и синего в системе нет.
+   Сетка: белый рельс с меню слева, чёрная сцена, узкая колонка 448px.
+   ============================================================ */
+
+:root{
+  --black:#000;
+  --white:#fff;
+  --dim:rgba(255,255,255,.44);
+  --dim-2:rgba(255,255,255,.66);
+  --line:rgba(255,255,255,.14);
+  --hover:rgba(255,255,255,.74);
+  --ui:'Inter','Segoe UI',system-ui,sans-serif;
+  --display:'Oswald','Inter',system-ui,sans-serif;
+  --rail-w:64px;
+  --bar-h:64px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--black);color:var(--white);
+  font:400 12px/1.5 var(--ui);
+  -webkit-font-smoothing:antialiased;overflow-wrap:anywhere;
+}
+/* короткие подписи и заголовки не рвём посередине слова */
+h1,h2,h3,.btn,.nav__link,.header__btn,.roster__item > b,.partners__item b,.notfound b,.team-player__nick{overflow-wrap:normal;word-break:normal}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+ul{margin:0;padding:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ---------------- каркас ---------------- */
+.layout{position:relative;min-height:100vh;display:flex;flex-direction:column}
+.layout--home::before{
+  content:" ";position:absolute;inset:0;z-index:-1;
+  background:url("../assets/hero.webp") no-repeat 50% 50%/cover;
+}
+.layout__content{flex:1 1 auto;position:relative;z-index:1}
+
+/* ---------------- шапка ---------------- */
+.header{position:fixed;inset:0;z-index:10;pointer-events:none}
+.header a,.header button,.header__container,.header__buttons{pointer-events:auto}
+
+/* белый рельс с вертикальным меню */
+.header__container{
+  position:relative;width:var(--rail-w);height:800px;margin-top:100px;
+  background:var(--white);color:var(--black);
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:20px 0 18px;
+}
+.header__bars{display:none}
+.nav__list{list-style:none;display:flex;flex-direction:column;align-items:center;gap:22px}
+.nav__link{
+  writing-mode:vertical-rl;
+  display:flex;align-items:center;gap:9px;
+  font:700 13px/1 var(--ui);letter-spacing:1.3px;text-transform:uppercase;color:var(--black);
+  opacity:.6;transition:opacity .2s,color .2s;
+}
+.nav__link:hover{opacity:1}
+.nav__link::after{content:"";display:block;width:3px;height:0;background:var(--black);transition:height .2s}
+.nav__link_active{opacity:1}
+.nav__link_active::after{height:24px}
+.header__logo{width:42px;height:42px;background:var(--white);display:flex;align-items:center;justify-content:center}
+.header__logo img{width:36px;height:36px;object-fit:contain}
+
+/* квадратики переключения языка, стоят первыми в правом верхнем углу */
+.lang{display:flex;gap:5px;flex:0 0 auto}
+.lang__btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:43px;height:43px;
+  background:transparent;color:var(--white);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45);
+  font:700 12px/1 var(--ui);letter-spacing:.06em;text-transform:uppercase;
+  transition:background .18s,color .18s,box-shadow .18s;
+}
+.lang__btn:hover{background:rgba(255,255,255,.14)}
+.lang__btn.is-active{background:var(--white);color:var(--black);box-shadow:none}
+
+/* белые кнопки справа сверху */
+.header__buttons{position:absolute;top:40px;right:40px;display:flex;gap:5px;height:43px}
+.header__btn{
+  display:inline-flex;align-items:center;gap:7px;height:43px;padding:0 15px;
+  background:var(--white);color:var(--black);
+  font:700 12px/1 var(--ui);text-transform:uppercase;white-space:nowrap;
+  transition:background .18s,color .18s;
+}
+.header__btn:hover{background:var(--hover);color:var(--black)}
+.header__btn i{font-style:normal;font-size:11px;opacity:.7}
+.header__btn--tag{color:var(--black);cursor:default;gap:8px}
+.header__btn--tag::before{content:"";width:8px;height:8px;background:rgba(0,0,0,.55);flex:0 0 auto}
+.header__btn--tag:hover{background:var(--white);color:var(--black)}
+
+/* ---------------- главная ---------------- */
+/* главная: пустая секция, всю картину рисует фон hero.webp */
+.index-page{position:relative;min-height:100vh}
+/* ---------------- кнопки ---------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;height:42px;padding:0 33px;
+  background:var(--white);color:var(--black);
+  font:700 12px/14px var(--ui);letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap;
+  transition:background .18s,color .18s;
+}
+.btn:hover{background:var(--hover);color:var(--black)}
+.btn--ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
+.btn--ghost:hover{background:var(--white);color:var(--black);box-shadow:none}
+
+/* ---------------- внутренние страницы ---------------- */
+.page{padding:96px 20px 0}
+.wrapper{width:448px;max-width:100%;margin:0 auto}
+.page--wide .wrapper{width:448px}
+.heading{font:500 48px/1.04 var(--display);text-transform:uppercase;margin-bottom:40px}
+.page__text p{font:400 15px/22px var(--ui);color:var(--dim-2);margin-bottom:18px}
+.page__text p strong{color:var(--white);font-weight:600}
+.page__text a{border-bottom:1px solid rgba(255,255,255,.44)}
+.page__text h2{font:600 20px/1.3 var(--display);text-transform:uppercase;margin:36px 0 14px}
+.page__text ul{list-style:none;margin:0 0 20px}
+.page__text li{
+  font:400 15px/22px var(--ui);color:var(--dim-2);padding:11px 0 11px 22px;
+  border-bottom:1px solid var(--line);position:relative;
+}
+.page__text li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:8px;background:rgba(255,255,255,.44)}
+.page__lead{font:400 17px/26px var(--ui);color:var(--white)}
+
+/* ---------------- состав ---------------- */
+/* открытые слоты: обычные строки */
+.roster{border-top:1px solid var(--line)}
+.roster__item{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  min-height:91px;border-bottom:1px solid var(--line);
+}
+.roster__item > b{font:600 clamp(22px,3vw,34px)/1 var(--display);text-transform:uppercase;letter-spacing:.02em;transition:color .2s}
+.roster__item span{font:700 11px/1.5 var(--ui);letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);text-align:right}
+.roster__item:hover > b{color:rgba(255,255,255,.62)}
+.roster__item--open > b{color:rgba(255,255,255,.34)}
+.roster__item--open:hover > b{color:rgba(255,255,255,.62)}
+
+/* карточки игроков: клик по нику раскрывает карточку, как на teamspirit.gg */
+.team-page__list{display:flex;flex-direction:column}
+.team-page__list-item{border-bottom:1px solid var(--line)}
+.team-page__list-item:first-child{border-top:1px solid var(--line)}
+.team-player{position:relative;transition:background .22s,color .22s}
+
+.team-player__img{display:none}
+.team-player__back{display:none}
+.team-player__nick{font:600 40px/1.3 var(--display);text-transform:uppercase;letter-spacing:.01em;transition:color .2s}
+.team-player__name{font:400 12px/22px var(--ui);letter-spacing:1.2px;text-transform:uppercase;color:var(--dim)}
+.team-player__body{display:none}
+
+.team-player__head{
+  position:relative;cursor:pointer;padding:12px 56px 16px 20px;
+  transition:background .22s,color .22s;
+}
+/* индикатор раскрытия */
+.team-player__head::after{
+  content:"";position:absolute;right:22px;top:50%;width:14px;height:14px;margin-top:-7px;
+  background:
+    linear-gradient(currentColor,currentColor) 0 6px/14px 2px no-repeat,
+    linear-gradient(currentColor,currentColor) 6px 0/2px 14px no-repeat;
+  opacity:.6;transition:opacity .2s,transform .3s;
+}
+.team-player:hover .team-player__head::after{opacity:1}
+.team-player:hover .team-player__nick{color:rgba(255,255,255,.62)}
+
+.team-player_active{background:var(--white);color:var(--black)}
+.team-player_active .team-player__head{background:var(--white);color:var(--black)}
+.team-player_active .team-player__head::after{opacity:0}
+.team-player_active .team-player__head{cursor:default}
+.team-player_active .team-player__nick{color:var(--black)}
+.team-player_active .team-player__name{color:rgba(0,0,0,.5)}
+
+.team-player_active .team-player__back{
+  display:flex;align-items:center;padding:16px 20px 0;
+}
+.back-link{
+  display:inline-flex;align-items:center;gap:9px;
+  font:700 12px/14px var(--ui);letter-spacing:1.2px;text-transform:uppercase;color:rgba(0,0,0,.62);
+  cursor:pointer;transition:color .18s;
+}
+.back-link::before{content:"";width:14px;height:2px;background:currentColor}
+.back-link:hover{color:var(--black)}
+
+.team-player_active .team-player__body{
+  display:block;background:var(--black);color:var(--white);
+  padding:22px 20px 30px;
+}
+.team-player__info-item{margin-top:22px}
+.team-player__info-item:first-child{margin-top:0}
+.team-player__info-label{
+  font:700 12px/22px var(--ui);letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--dim);margin-bottom:8px;
+}
+.team-player__info-value{font:400 15px/28px var(--ui);color:var(--white)}
+.team-player__socials{display:flex;flex-wrap:wrap;gap:8px 24px}
+.socials__none{color:var(--dim);font:400 15px/28px var(--ui)}
+.socials__item{
+  display:inline-flex;align-items:center;gap:7px;
+  font:700 12px/20px var(--ui);letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--white);border-bottom:1px solid var(--line);padding-bottom:2px;
+  transition:border-color .18s,color .18s;
+}
+.socials__item:hover{border-color:var(--white)}
+.socials__item i{font-style:normal;opacity:.5}
+
+/* фото игрока: логика ровно как на teamspirit.gg.
+   Широкий экран: правая половина экрана во всю высоту, закреплено к окну,
+   список слева прокручивается мимо. Узкий экран: фото встаёт в поток карточки
+   во всю ширину. Базово фото скрыто, показывается только у раскрытой карточки. */
+.team-player__photo{display:none;background:no-repeat 50% 50%/cover;pointer-events:none}
+.team-player_active .team-player__photo{display:block}
+
+@media (min-width:1100px){
+  .team-player__photo{position:fixed;top:0;left:50%;right:0;bottom:0;z-index:0}
+}
+@media (max-width:1099px){
+  .team-player__photo{position:relative;width:100%;aspect-ratio:8/9;max-height:560px;
+    background-position:50% 30%;margin:0 0 18px}
+}
+
+/* партнёры */
+/* партнёры: белые квадраты с логотипами, как на teamspirit.gg.
+   страница партнёров: плитка стоит по центру экрана */
+.page--partners{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:96px 20px}
+.page--partners .wrapper{width:auto;max-width:100%;margin:0}
+.page--partners .partners{justify-content:center}
+.page--partners .partners__item{width:min(78vw, 320px)}
+.partners{display:flex;flex-wrap:wrap;gap:6px}
+.partners__item{width:calc(50% - 3px)}
+
+.partners__item{
+  aspect-ratio:1/1;background:var(--white);
+  display:flex;align-items:center;justify-content:center;padding:8%;
+  transition:opacity .2s;
+}
+.partners__item:hover{opacity:.82}
+.partners__link{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.partners__link img{width:100%;height:auto;max-height:100%;object-fit:contain}
+
+/* брендбук */
+.brand-plate{background:var(--white);padding:16px;box-shadow:16px 16px 0 rgba(255,255,255,.16);max-width:320px;margin-bottom:34px}
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:30px}
+.swatch{background:var(--black);padding:14px 12px}
+.swatch i{display:block;height:56px;margin-bottom:10px}
+.swatch b{display:block;font:700 11px/1 var(--ui);letter-spacing:1.2px;text-transform:uppercase}
+.swatch span{font:400 11px/1.6 var(--ui);color:var(--dim)}
+
+/* ---------------- 404 ---------------- */
+.notfound{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:120px 20px 60px}
+.notfound b{font:700 clamp(90px,20vw,260px)/.86 var(--display);letter-spacing:.02em}
+.notfound b span{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.5)}
+.notfound p{font:400 15px/24px var(--ui);color:var(--dim-2);max-width:420px}
+
+/* ---------------- широкие экраны: состав в две зоны, как на teamspirit.gg ----------------
+   слева колонка с карточками, справа закреплённое фото игрока (его рисует
+   .team-player__photo выше). Ниже 1100px фото уходит в поток карточки. */
+@media (min-width:1100px){
+  .page--team .wrapper{width:448px;margin-left:9vw;margin-right:0}
+}
+
+/* ---------------- мобильная версия ---------------- */
+@media (max-width:900px){
+  /* на мобильных отдельная графика: вертикальный кадр со словом и логотипом */
+  .layout--home::before{background-image:url("../assets/hero-mobile.webp");background-position:50% 40%}
+  .header__container{
+    position:fixed;left:0;right:0;top:0;width:100%;height:var(--bar-h);margin:0;
+    background:var(--black);color:var(--white);
+    flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;
+    padding:0 16px;
+  }
+  .header__bars{
+    display:flex;flex-direction:column;justify-content:space-between;
+    width:16px;height:11px;padding:0;z-index:30;flex:0 0 auto;
+  }
+  .header__bars span{display:block;height:2px;background:var(--white);transition:transform .2s,background .2s,opacity .2s}
+  .header__bars.is-active span{background:#000}
+  .header__bars.is-active span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+  .header__bars.is-active span:nth-child(2){opacity:0}
+  .header__bars.is-active span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+  .header__logo{width:42px;height:42px;background:transparent;flex:0 0 auto}
+  .header__nav{
+    position:fixed;inset:0;background:var(--white);color:var(--black);z-index:20;
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;visibility:hidden;transform:scale(.94);transition:opacity .25s,transform .25s,visibility .25s;
+  }
+  .header__nav.is-open{opacity:1;visibility:visible;transform:none}
+  .nav__list{gap:20px}
+  .nav__link{
+    writing-mode:horizontal-tb;font:700 16px/1 var(--ui);letter-spacing:.04em;
+    opacity:1;
+  }
+  .nav__link::after{width:24px;height:0}
+  .nav__link_active::after{height:3px;width:24px}
+  .nav__item{display:flex;justify-content:center}
+  .nav__item .nav__link{flex-direction:column;gap:7px}
+
+  .header__buttons{top:auto;bottom:auto;right:14px;height:26px;position:fixed;top:19px}
+  .header__btn{height:26px;padding:0 9px;font-size:10px;gap:5px}
+  .lang__btn{width:26px;height:26px;font-size:10px}
+  .lang{gap:4px}
+  .header__btn--tag{display:none}
+
+  .index-page{padding:96px 20px 40px}
+
+
+  .page{padding:96px 20px 0}
+  .heading{font-size:36px;margin-bottom:26px}
+  .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  .team-player__nick{font-size:30px}
+  .team-player__head{padding:12px 48px 14px 16px}
+  .team-player_active .team-player__back{padding:14px 16px 0}
+  .team-player_active .team-player__body{padding:18px 16px 24px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}

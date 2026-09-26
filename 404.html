@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 · MPEI LARPERS</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+
+  <header class="header">
+    <div class="header__container">
+      <button class="header__bars" type="button" data-menu-toggle aria-label="Открыть меню" data-i18n-attr="aria-label:aria.menuBtn">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header__nav">
+        <nav class="nav" aria-label="Меню команды" data-i18n-attr="aria-label:aria.menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">О команде</a></li>
+            <li class="nav__item"><a class="nav__link" href="team.html" data-i18n="nav.team">Состав</a></li>            <li class="nav__item"><a class="nav__link" href="partners.html" data-i18n="nav.partners">Партнёры</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class="header__logo" href="index.html" aria-label="MPEI LARPERS, на главную" data-i18n-attr="aria-label:aria.logo">
+        <img src="assets/logo-dark.png" alt="" width="640" height="640">
+      </a>
+    </div>
+    <div class="header__buttons">
+      <div class="lang" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="Язык сайта">
+        <button class="lang__btn" type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang__btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="header__btn" href="https://t.me/mpei_larpers" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+      <a class="header__btn" href="https://ctftime.org/team/447741" target="_blank" rel="noopener">CTFtime <i>↗</i></a>
+    </div>
+  </header>
+
+  <main class="layout__content">
+    <section class="notfound">
+      <b>4<span>0</span>4</b>
+      <p data-i18n="nf.text">Такой страницы у команды нет. Флаг здесь тоже не спрятан, проверяли.</p>
+      <a class="btn" href="index.html" data-i18n="nf.btn">На главную</a>
+    </section>
+  </main>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Партнёры · MPEI LARPERS</title>
+<meta name="description" content="Партнёры CTF-команды mpei_larpers: НИУ МЭИ, сотрудничество с компаниями и сообществами.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Партнёры · MPEI LARPERS">
+<meta property="og:description" content="Сотрудничество с командой: турниры, мастер-классы, задачи для студентов.">
+<meta property="og:image" content="https://mpei-larpers.ru/assets/og.jpg">
+<meta property="og:url" content="https://mpei-larpers.ru/partners.html">
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="canonical" href="https://mpei-larpers.ru/partners.html">
+</head>
+<body>
+<div class="layout">
+
+  <header class="header">
+    <div class="header__container">
+      <button class="header__bars" type="button" data-menu-toggle aria-label="Открыть меню" data-i18n-attr="aria-label:aria.menuBtn" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header__nav">
+        <nav class="nav" aria-label="Меню команды" data-i18n-attr="aria-label:aria.menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">О команде</a></li>
+            <li class="nav__item"><a class="nav__link" href="team.html" data-i18n="nav.team">Состав</a></li>
+            <li class="nav__item"><a class="nav__link nav__link_active" href="partners.html" aria-current="page" data-i18n="nav.partners">Партнёры</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class="header__logo" href="index.html" aria-label="MPEI LARPERS, на главную" data-i18n-attr="aria-label:aria.logo">
+        <img src="assets/logo-dark.png" alt="" width="640" height="640">
+      </a>
+    </div>
+    <div class="header__buttons">
+      <div class="lang" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="Язык сайта">
+        <button class="lang__btn" type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang__btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="header__btn" href="https://t.me/mpei_larpers" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+      <a class="header__btn" href="https://ctftime.org/team/447741" target="_blank" rel="noopener">CTFtime <i>↗</i></a>
+    </div>
+  </header>
+
+  <main class="layout__content">
+
+    <section class="page page--wide page--partners">
+      <div class="wrapper">
+
+        <!-- Партнёры: белые квадраты с логотипами, как на teamspirit.gg.
+             Добавить нового: скопировать .partners__item и положить лого в assets. -->
+        <div class="partners">
+          <div class="partners__item">
+            <a class="partners__link" href="https://mpei.ru" target="_blank" rel="noopener" aria-label="НИУ МЭИ, официальный сайт">
+              <img src="assets/mpei-logo.png" alt="НИУ МЭИ" width="339" height="58">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Брендбук · MPEI LARPERS</title>
+<meta name="description" content="Брендбук CTF-команды mpei_larpers: логотип, палитра, шрифты, правила использования.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Брендбук · MPEI LARPERS">
+<meta property="og:description" content="Логотип, палитра и шрифты команды.">
+<meta property="og:image" content="https://mpei-larpers.ru/assets/og.jpg">
+<meta property="og:url" content="https://mpei-larpers.ru/brand.html">
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="canonical" href="https://mpei-larpers.ru/brand.html">
+</head>
+<body>
+<div class="layout">
+
+  <header class="header">
+    <div class="header__container">
+      <button class="header__bars" type="button" data-menu-toggle aria-label="Открыть меню" data-i18n-attr="aria-label:aria.menuBtn">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header__nav">
+        <nav class="nav" aria-label="Меню команды" data-i18n-attr="aria-label:aria.menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">О команде</a></li>
+            <li class="nav__item"><a class="nav__link" href="team.html" data-i18n="nav.team">Состав</a></li>            <li class="nav__item"><a class="nav__link" href="partners.html" data-i18n="nav.partners">Партнёры</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class="header__logo" href="index.html" aria-label="MPEI LARPERS, на главную" data-i18n-attr="aria-label:aria.logo">
+        <img src="assets/logo-dark.png" alt="" width="640" height="640">
+      </a>
+    </div>
+    <div class="header__buttons">
+      <div class="lang" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="Язык сайта">
+        <button class="lang__btn" type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang__btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="header__btn" href="https://t.me/mpei_larpers" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+      <a class="header__btn" href="https://ctftime.org/team/447741" target="_blank" rel="noopener">CTFtime <i>↗</i></a>
+    </div>
+  </header>
+
+  <main class="layout__content">
+
+    <section class="page">
+      <div class="wrapper">
+        <h1 class="heading" data-i18n="h1.brand">Брендбук</h1>
+
+        <div class="brand-plate"><img src="assets/logo-dark.png" alt="Логотип mpei_larpers" width="640" height="640"></div>
+        <div class="page__text">
+          <p class="page__lead" data-i18n="brand.lead">Логотип: щит с надписью LARPERS MPEI. Два варианта: чёрный для светлых подложек и белый для тёмных.</p>
+          <p data-i18n="brand.p1">Логотип используем без искажений пропорций. На чёрном фоне берём белый вариант (<span style="color:#fff">assets/logo-light.png</span>), на белом: чёрный (<span style="color:#fff">assets/logo-dark.png</span>). Не перекрашиваем, не добавляем эффекты, не меняем надписи внутри щита.</p>
+
+          <h2 data-i18n="brand.h2.palette">Палитра</h2>
+          <!-- ЗАМЕНИ: цвета и подписи под фирменный стиль -->
+          <div class="swatches">
+            <div class="swatch"><i style="background:#FFFFFF"></i><b data-i18n="brand.white">Белый</b><span>#FFFFFF</span></div>
+            <div class="swatch"><i style="background:rgba(255,255,255,.44)"></i><b data-i18n="brand.gray">Серый</b><span>rgba(255,255,255,.44)</span></div>
+            <div class="swatch"><i style="background:rgba(255,255,255,.14)"></i><b data-i18n="brand.line">Линия</b><span>rgba(255,255,255,.14)</span></div>
+            <div class="swatch"><i style="background:#000000"></i><b data-i18n="brand.black">Чёрный</b><span>#000000</span></div>
+          </div>
+
+          <h2 data-i18n="brand.h2.fonts">Шрифты</h2>
+          <ul>
+            <li data-i18n="brand.fonts1">Заголовки: Oswald, прописные, вес 500-600, сжатый гротеск.</li>
+            <li data-i18n="brand.fonts2">Текст и интерфейс: Inter, обычные и полужирные начертания.</li>
+            <li data-i18n="brand.fonts3">Служебные подписи: Inter, 11-12 px, разрядка 1.1-1.3 px, прописные.</li>
+          </ul>
+
+          <h2 data-i18n="brand.h2.usage">Применение</h2>
+          <p data-i18n="brand.usage">Плитка с логотипом ставится на белой подложке со светлой сдвинутой тенью. Фон чёрный, единственный акцент это белый: активные пункты, ссылки, кнопки при наведении. Полутона берём прозрачностью белого, а не отдельными цветами.</p>
+          <p data-i18n="brand.p2">Аватарки и иконки: квадрат с логотипом, версия для соцсетей лежит в <span style="color:#fff">assets/og.jpg</span> (1200x630).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
