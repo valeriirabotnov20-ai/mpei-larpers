@@ -33,6 +33,17 @@ p{margin:0}
 ul{margin:0;padding:0}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
+/* Клавиатурная навигация и ссылка для пропуска повторяющейся шапки. */
+:focus-visible{outline:3px solid #aaa;outline-offset:4px}
+.skip-link,.visually-hidden{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0
+}
+.skip-link:focus-visible{
+  z-index:100;top:12px;left:12px;width:auto;height:auto;margin:0;padding:12px 16px;
+  clip:auto;overflow:visible;background:var(--white);color:var(--black);font-weight:700
+}
+
 /* ---------------- каркас ---------------- */
 .layout{position:relative;min-height:100vh;display:flex;flex-direction:column}
 .layout--home::before{
@@ -248,8 +259,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------------- 404 ---------------- */
 .notfound{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:120px 20px 60px}
-.notfound b{font:700 clamp(90px,20vw,260px)/.86 var(--display);letter-spacing:.02em}
-.notfound b span{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.5)}
+.notfound__code{font:700 clamp(90px,20vw,260px)/.86 var(--display);letter-spacing:.02em;margin:0}
+.notfound__code span{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.5)}
 .notfound p{font:400 15px/24px var(--ui);color:var(--dim-2);max-width:420px}
 
 /* ---------------- широкие экраны: состав в две зоны, как на teamspirit.gg ----------------
@@ -315,5 +326,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 
 @media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
 }
