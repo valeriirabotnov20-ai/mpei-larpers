@@ -10,10 +10,7 @@
     nav.classList.toggle('is-open', open);
     toggle.classList.toggle('is-active', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    var isEnglish = document.documentElement.lang === 'en';
-    toggle.setAttribute('aria-label', open
-      ? (isEnglish ? 'Close menu' : 'Закрыть меню')
-      : (isEnglish ? 'Open menu' : 'Открыть меню'));
+    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
     document.documentElement.style.overflow = open ? 'hidden' : '';
   }
 

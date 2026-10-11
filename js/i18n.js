@@ -10,9 +10,7 @@
       'nav.partners': 'Партнёры',
 
       'h1.about': 'О команде',
-      'h1.home': 'MPEI LARPERS — CTF-команда НИУ МЭИ',
       'h1.team': 'Состав',
-      'h1.partners': 'Партнёры',
       'h1.brand': 'Брендбук',
       'h1.404': '404',
 
@@ -68,11 +66,9 @@
 
       'aria.menu': 'Меню команды',
       'aria.menuBtn': 'Открыть меню',
-      'aria.menuClose': 'Закрыть меню',
       'aria.logo': 'MPEI LARPERS, на главную',
       'aria.lang': 'Язык сайта',
-      'aria.readMore': 'Читать новость',
-      'a11y.skip': 'Перейти к содержимому'
+      'aria.readMore': 'Читать новость'
     },
 
     en: {
@@ -82,9 +78,7 @@
       'nav.partners': 'Partners',
 
       'h1.about': 'About the team',
-      'h1.home': 'MPEI LARPERS — NRU MPEI CTF team',
       'h1.team': 'Roster',
-      'h1.partners': 'Partners',
       'h1.brand': 'Brandbook',
       'h1.404': '404',
 
@@ -140,11 +134,9 @@
 
       'aria.menu': 'Team menu',
       'aria.menuBtn': 'Open menu',
-      'aria.menuClose': 'Close menu',
       'aria.logo': 'MPEI LARPERS, back to home',
       'aria.lang': 'Site language',
-      'aria.readMore': 'Read the news',
-      'a11y.skip': 'Skip to content'
+      'aria.readMore': 'Read the news'
     }
   };
 
