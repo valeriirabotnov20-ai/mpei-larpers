@@ -10,6 +10,7 @@
       'nav.partners': 'Партнёры',
 
       'h1.about': 'О команде',
+      'h1.home': 'MPEI LARPERS — CTF-команда НИУ МЭИ',
       'h1.team': 'Состав',
       'h1.partners': 'Партнёры',
       'h1.brand': 'Брендбук',
@@ -81,6 +82,7 @@
       'nav.partners': 'Partners',
 
       'h1.about': 'About the team',
+      'h1.home': 'MPEI LARPERS — NRU MPEI CTF team',
       'h1.team': 'Roster',
       'h1.partners': 'Partners',
       'h1.brand': 'Brandbook',
