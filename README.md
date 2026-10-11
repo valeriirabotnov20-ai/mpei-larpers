@@ -58,7 +58,7 @@ git remote add origin https://github.com/<твой-ник>/mpei-larpers.git
 git push -u origin main
 ```
 
-Дальше: **Settings → Pages → Source: Deploy from a branch → Branch: `main`, папка `/ (root)` → Save**. В Settings → Pages укажи custom domain `mpei-larpers.ru`. Перед настройкой DNS сначала добавь домен в GitHub, чтобы закрепить его за аккаунтом и избежать риска перехвата поддомена. У корневого домена (`@`) у регистратора создай четыре A-записи GitHub Pages:
+Дальше: **Settings → Pages → Source: Deploy from a branch → Branch: `main`, папка `/ (root)` → Save**. В Settings → Pages укажи custom domain `mpei-larpers.online`. Перед настройкой DNS сначала добавь домен в GitHub, чтобы закрепить его за аккаунтом и избежать риска перехвата поддомена. У корневого домена (`@`) у регистратора создай четыре A-записи GitHub Pages:
 
 ```text
 185.199.108.153
